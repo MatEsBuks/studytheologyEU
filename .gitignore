@@ -1,0 +1,15 @@
+node_modules/
+.env
+.tmp/
+temporary screenshots/
+credentials.json
+token.json
+*.mjs
+package.json
+package-lock.json
+tailwind.config.js
+tailwind.input.css
+CLAUDE.md
+CLAUDE_web.md
+Webovky/
+screenshot*/

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Theology in Prague — ETF UK</title>
+
+  <!-- ── Resource hints ── -->
+  <link rel="preconnect" href="https://formconnector.com" crossorigin>
+  <link rel="dns-prefetch" href="https://web.etf.cuni.cz">
+
+  <!-- Preload hero background (LCP image) — WebP for modern browsers -->
+  <link rel="preload" as="image" href="Webovky/Fotky/prague_photo.webp" fetchpriority="high" type="image/webp">
+
+  <!-- Preload the three most-used Silka weights as WOFF2 -->
+  <link rel="preload" as="font" type="font/woff2" href="Webovky/Typografie/woff2/Silka-Regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="Webovky/Typografie/woff2/Silka-SemiBold.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="Webovky/Typografie/woff2/Silka-Bold.woff2" crossorigin>
+
+  <link rel="stylesheet" href="tailwind.min.css">
+  <style>
+    /* ── Silka font-face (WOFF2 first, OTF fallback) ── */
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Thin.woff2') format('woff2'), url('Webovky/Typografie/Silka-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-ThinItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-ThinItalic.otf') format('opentype'); font-weight: 100; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-ExtraLight.woff2') format('woff2'), url('Webovky/Typografie/Silka-ExtraLight.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-ExtraLightItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-ExtraLightItalic.otf') format('opentype'); font-weight: 200; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Light.woff2') format('woff2'), url('Webovky/Typografie/Silka-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-LightItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Regular.woff2') format('woff2'), url('Webovky/Typografie/Silka-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-RegularItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-RegularItalic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Medium.woff2') format('woff2'), url('Webovky/Typografie/Silka-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-MediumItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-SemiBold.woff2') format('woff2'), url('Webovky/Typografie/Silka-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-SemiBoldItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-SemiBoldItalic.otf') format('opentype'); font-weight: 600; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Bold.woff2') format('woff2'), url('Webovky/Typografie/Silka-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-BoldItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-Black.woff2') format('woff2'), url('Webovky/Typografie/Silka-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Silka'; src: url('Webovky/Typografie/woff2/Silka-BlackItalic.woff2') format('woff2'), url('Webovky/Typografie/Silka-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Silka', system-ui, sans-serif;
+      background-color: #F7F5F0;
+      color: #1A1A2A;
+      margin: 0;
+    }
+
+    /* ── Brand tokens ── */
+    :root {
+      --navy:   #1D3461;
+      --navy-d: #142447;
+      --navy-l: #2B4B8C;
+      --red:    #C41E24;
+      --red-d:  #9E1419;
+      --cream:  #F7F5F0;
+      --warm:   #EDE9E0;
+      --border: rgba(29,52,97,0.12);
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s ease;
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    @media (max-width: 768px) {
+      .navbar {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        background: rgba(247,245,240,0.96);
+      }
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 32px rgba(29,52,97,0.08), 0 1px 0 rgba(29,52,97,0.06);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image: url('Webovky/Fotky/prague_photo.jpg');
+      background-image: image-set(url('Webovky/Fotky/prague_photo.webp') type('image/webp'), url('Webovky/Fotky/prague_photo.jpg') type('image/jpeg'));
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    /* ── Decorative rule ── */
+    .rule {
+      display: inline-block;
+      width: 48px; height: 2px;
+      background: var(--red);
+      margin-bottom: 1.25rem;
+      border-radius: 2px;
+    }
+
+    /* ── Programme tabs ── */
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+    .tab-btn {
+      position: relative;
+      padding: 0.875rem 1.75rem;
+      font-family: 'Silka', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: rgba(29,52,97,0.55);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0; height: 2px;
+      background: var(--navy);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .tab-btn:hover { color: var(--navy); }
+    .tab-btn.active { color: var(--navy); font-weight: 600; }
+    .tab-btn.active::after { transform: scaleX(1); }
+
+    /* ── Tab panels ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Info cards ── */
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 2px 12px rgba(29,52,97,0.05), 0 1px 3px rgba(29,52,97,0.04);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .info-card:hover {
+      box-shadow: 0 8px 32px rgba(29,52,97,0.10), 0 2px 8px rgba(29,52,97,0.06);
+      transform: translateY(-2px);
+    }
+
+    /* ── Feature pills ── */
+    .pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.3rem 0.85rem;
+      background: rgba(29,52,97,0.07);
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── CTA button ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      background: var(--navy);
+      color: #fff;
+      font-family: 'Silka', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(29,52,97,0.22), 0 1px 4px rgba(29,52,97,0.12);
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: var(--navy-d);
+      box-shadow: 0 6px 24px rgba(29,52,97,0.30), 0 2px 6px rgba(29,52,97,0.14);
+      transform: translateY(-1px);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 3px solid rgba(29,52,97,0.4); outline-offset: 2px; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Silka', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      border-radius: 8px;
+      border: 1.5px solid var(--navy);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-outline:hover {
+      background: var(--navy);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 3px solid rgba(29,52,97,0.4); outline-offset: 2px; }
+
+    /* ── Stat block ── */
+    .stat-num {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    /* ── Section heading ── */
+    .section-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    /* ── Accordion ── */
+    .accordion-item { border-bottom: 1px solid var(--border); }
+    .accordion-btn {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 1.125rem 0;
+      background: none; border: none; cursor: pointer;
+      font-family: 'Silka', sans-serif;
+      font-weight: 500; font-size: 0.95rem;
+      color: var(--navy);
+      text-align: left;
+      transition: color 0.2s ease;
+    }
+    .accordion-btn:hover { color: var(--navy-l); }
+    .accordion-icon {
+      width: 20px; height: 20px; flex-shrink: 0;
+      border-radius: 50%; border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.25s ease, background 0.2s ease;
+    }
+    .accordion-btn.open .accordion-icon {
+      background: var(--navy); border-color: var(--navy); transform: rotate(45deg);
+    }
+    .accordion-btn.open .accordion-icon svg { stroke: #fff; }
+    .accordion-body {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .accordion-body p { padding: 0 0 1.25rem; color: rgba(26,26,42,0.7); line-height: 1.7; font-size: 0.92rem; }
+
+    /* ── Quote block ── */
+    .quote-bar { width: 3px; border-radius: 2px; background: var(--red); flex-shrink: 0; align-self: stretch; }
+
+    /* ── Footer ── */
+    footer { background: var(--navy-d); color: rgba(255,255,255,0.7); }
+    footer a:hover { color: #fff; }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 1024px) {
+      .tab-btn { padding: 0.75rem 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .tab-btn { padding: 0.625rem 0.875rem; font-size: 0.8rem; }
+      .info-card { padding: 1.25rem 1.5rem; }
+      .btn-primary, .btn-outline { padding: 0.75rem 1.5rem; font-size: 0.875rem; }
+    }
+    @media (max-width: 480px) {
+      .tab-btn { padding: 0.5rem 0.75rem; font-size: 0.75rem; white-space: nowrap; }
+      .pill { font-size: 0.72rem; padding: 0.25rem 0.7rem; }
+    }
+    /* hide scrollbar on tab nav */
+    .tab-nav::-webkit-scrollbar { display: none; }
+
+    /* ── GPU hints for frequently animated elements ── */
+    .btn-primary, .btn-outline { will-change: transform; }
+    .tab-btn::after { will-change: transform; }
+    .accordion-icon { will-change: transform; }
+
+    /* ── Touch devices: disable hover lift (no hover pointer) ── */
+    @media (hover: none) {
+      .info-card:hover {
+        box-shadow: 0 2px 12px rgba(29,52,97,0.05), 0 1px 3px rgba(29,52,97,0.04);
+        transform: none;
+      }
+      .btn-primary:hover {
+        background: var(--navy);
+        box-shadow: 0 4px 16px rgba(29,52,97,0.22), 0 1px 4px rgba(29,52,97,0.12);
+        transform: none;
+      }
+      .btn-outline:hover { background: transparent; color: var(--navy); transform: none; }
+    }
+
+    /* ── content-visibility: skip layout/paint for off-screen sections ── */
+    #why-prague, #faculty, #admission, #contact {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 800px;
+    }
+
+    /* ── Respect user's reduced-motion preference ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ── FormConnector visual override ── */
+    .formconnector-wrap input,
+    .formconnector-wrap textarea,
+    .formconnector-wrap select {
+      font-family: 'Silka', system-ui, sans-serif !important;
+      font-size: 0.875rem !important;
+      color: #1A1A2A !important;
+      background: #F7F5F0 !important;
+      border: 1px solid rgba(29,52,97,0.2) !important;
+      border-radius: 8px !important;
+      padding: 0.75rem 1rem !important;
+      width: 100% !important;
+      box-shadow: none !important;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    .formconnector-wrap input:focus,
+    .formconnector-wrap textarea:focus,
+    .formconnector-wrap select:focus {
+      outline: none !important;
+      border-color: #1D3461 !important;
+      box-shadow: 0 0 0 3px rgba(29,52,97,0.12) !important;
+    }
+    .formconnector-wrap label {
+      font-family: 'Silka', system-ui, sans-serif !important;
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: #1D3461 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      margin-bottom: 0.375rem !important;
+    }
+    .formconnector-wrap button[type="submit"],
+    .formconnector-wrap input[type="submit"] {
+      font-family: 'Silka', system-ui, sans-serif !important;
+      font-weight: 600 !important;
+      font-size: 0.9rem !important;
+      background: #1D3461 !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 8px !important;
+      padding: 0.875rem 2rem !important;
+      cursor: pointer !important;
+      width: 100% !important;
+      box-shadow: 0 4px 16px rgba(29,52,97,0.22) !important;
+      transition: background 0.2s ease, transform 0.15s ease !important;
+      letter-spacing: 0.02em !important;
+    }
+    .formconnector-wrap button[type="submit"]:hover,
+    .formconnector-wrap input[type="submit"]:hover {
+      background: #142447 !important;
+      transform: translateY(-1px) !important;
+    }
+    .formconnector-wrap .form-group,
+    .formconnector-wrap .field-wrap,
+    .formconnector-wrap .fc-field {
+      margin-bottom: 1rem !important;
+    }
+    .formconnector-wrap * {
+      font-family: 'Silka', system-ui, sans-serif !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 focus-visible:outline-none">
+      <picture>
+        <source srcset="Webovky/LOGO_ETF_horizontal-EN.webp" type="image/webp">
+        <img src="Webovky/LOGO_ETF_horizontal-EN.png" alt="Protestant Theological Faculty, Charles University" class="h-10 w-auto" />
+      </picture>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#programmes" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200 focus-visible:outline-[#1D3461] focus-visible:outline-2 focus-visible:outline-offset-2">Programmes</a>
+      <a href="#why-prague" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Why Prague</a>
+      <a href="#faculty" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Faculty</a>
+      <a href="#admission" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Admission</a>
+      <a href="#contact" class="btn-primary text-sm py-2 px-5">Apply Now →</a>
+    </div>
+    <!-- Mobile menu button -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md text-[#1D3461] hover:bg-[#1D3461]/10 transition-colors" aria-label="Toggle menu">
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[rgba(29,52,97,0.1)] bg-white">
+    <div class="px-6 py-4 flex flex-col gap-4">
+      <a href="#programmes" class="text-sm font-medium text-[#1D3461]">Programmes</a>
+      <a href="#why-prague" class="text-sm font-medium text-[#1D3461]">Why Prague</a>
+      <a href="#faculty" class="text-sm font-medium text-[#1D3461]">Faculty</a>
+      <a href="#admission" class="text-sm font-medium text-[#1D3461]">Admission</a>
+      <a href="#contact" class="btn-primary text-center mt-2">Apply Now →</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero" id="home" style="padding-top: 88px;">
+
+  <!-- Cream gradient overlay: opaque left (text) → transparent right (photo) — desktop -->
+  <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: linear-gradient(to right,
+      rgba(247,245,240,0.97) 0%,
+      rgba(247,245,240,0.97) 36%,
+      rgba(247,245,240,0.88) 46%,
+      rgba(247,245,240,0.68) 57%,
+      rgba(247,245,240,0.38) 68%,
+      rgba(247,245,240,0.14) 80%,
+      rgba(247,245,240,0.04) 91%,
+      transparent 100%);"></div>
+
+  <!-- Mobile overlay: uniform cream wash so text stays legible on small screens -->
+  <div class="md:hidden" style="position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: rgba(247,245,240,0.82);"></div>
+
+  <!-- Content -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20 w-full" style="position: relative; z-index: 1;">
+
+    <!-- Text block: constrained to ~57% so photo shows on the right -->
+    <div class="md:max-w-[57%]">
+      <span class="section-tag">Protestant Theological Faculty · Charles University</span>
+      <h1 class="mt-4 mb-7 font-black text-[#1D3461] leading-[1.08] tracking-[-0.03em]"
+          style="font-size: clamp(2rem, 4vw, 3.6rem);">
+        Study Theology<br/>in The Heart of Europe
+      </h1>
+
+      <div class="mb-8">
+        <p class="text-base md:text-lg text-[#1A1A2A]/80 leading-[1.65] mb-3" style="font-weight: 500;">
+          Are you in the right place?
+        </p>
+        <ul class="mb-4 flex flex-col gap-1.5 pl-1">
+          <li class="flex items-start gap-3 text-base text-[#1A1A2A]/65 leading-[1.6]" style="font-weight: 400;">
+            <span class="mt-[0.48em] w-1.5 h-1.5 rounded-full bg-[#C41E24] flex-shrink-0"></span>
+            If you are fascinated by the big questions…
+          </li>
+          <li class="flex items-start gap-3 text-base text-[#1A1A2A]/65 leading-[1.6]" style="font-weight: 400;">
+            <span class="mt-[0.48em] w-1.5 h-1.5 rounded-full bg-[#C41E24] flex-shrink-0"></span>
+            If you want to understand how religion has shaped the world…
+          </li>
+          <li class="flex items-start gap-3 text-base text-[#1A1A2A]/65 leading-[1.6]" style="font-weight: 400;">
+            <span class="mt-[0.48em] w-1.5 h-1.5 rounded-full bg-[#C41E24] flex-shrink-0"></span>
+            If you are on a journey to understand what God really means…
+          </li>
+        </ul>
+        <p class="text-base md:text-lg text-[#1A1A2A]/80 leading-[1.65] mb-1" style="font-weight: 500;">
+          Then you are in the right place! The place where faith meets reason, where you can explore the questions that shape humanity.
+        </p>
+        <p class="text-base md:text-lg text-[#1A1A2A]/80 leading-[1.65]" style="font-weight: 500;">
+          Take the next steps with us!
+        </p>
+      </div>
+    </div>
+
+    <!-- Pills: 2×2 grid -->
+    <div class="grid grid-cols-2 gap-3 mb-8" style="max-width: 560px;">
+      <span class="pill">
+        <!-- Graduation cap -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+        Internationally recognized degrees.
+      </span>
+      <span class="pill">
+        <!-- Checkbox / check-square -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+        </svg>
+        Highest quality standards.
+      </span>
+      <span class="pill">
+        <!-- Group of people -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Learning community.
+      </span>
+      <span class="pill">
+        <!-- Trophy -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+        </svg>
+        Academic excellence.
+      </span>
+    </div>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap gap-4">
+      <a href="#programmes" class="btn-primary">Explore Programmes</a>
+      <a href="#admission" class="btn-outline">Admission Info</a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     PROGRAMMES  (tab switcher)
+══════════════════════════════════════════════ -->
+<section class="py-14 md:py-20 bg-white" id="programmes">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-12">
+      <span class="section-tag">Academic Programmes</span>
+      <h2 class="mt-3 text-[#1D3461] font-bold tracking-tight" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em;">
+        Choose your path
+      </h2>
+      <p class="mt-4 text-[#1A1A2A]/60 text-lg leading-[1.7] max-w-xl">
+        We help students establish a firmer position in the world and discover their life's purpose.
+      </p>
+    </div>
+
+    <!-- Tab navigation -->
+    <div class="relative mb-10">
+      <div class="tab-nav overflow-x-auto" role="tablist" aria-label="Study programmes"
+           style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+      <button class="tab-btn active" data-tab="bachelor" role="tab" aria-selected="true" aria-controls="tab-bachelor">
+        Bachelor's Programme
+      </button>
+      <button class="tab-btn" data-tab="master" role="tab" aria-selected="false" aria-controls="tab-master">
+        Master's Programme
+      </button>
+      <button class="tab-btn" data-tab="doctoral" role="tab" aria-selected="false" aria-controls="tab-doctoral">
+        Doctoral Studies
+      </button>
+      </div>
+      <!-- Fade hint for mobile scroll -->
+      <div class="md:hidden pointer-events-none absolute top-0 right-0 bottom-0 w-12"
+           style="background: linear-gradient(to right, transparent, #fff);"></div>
+    </div>
+
+    <!-- ── BACHELOR ── -->
+    <div class="tab-panel active" id="tab-bachelor" role="tabpanel">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <!-- Left: description -->
+        <div>
+          <span class="rule"></span>
+          <h3 class="text-2xl font-bold text-[#1D3461] mb-6 leading-tight">Protestant Theology<br/><span class="text-[#C41E24]">Bachelor's programme</span></h3>
+
+          <div class="flex flex-col gap-5 mb-8">
+            <div>
+              <p class="text-sm font-semibold text-[#1D3461] leading-snug mb-1">Do you ever get lost in the big questions about the relationship between humanity and God?</p>
+              <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">This three-year bachelor's programme will guide you through many of your questions, will hone the academic skills you need to find answers, and provide life-changing experiences in the heart of Europe.</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[#1D3461] leading-snug mb-1">Have you ever wondered how modern translations affect religious texts?</p>
+              <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">As part of this programme, you will learn to interpret key texts in the original Hebrew and Greek and go straight to the source of their meaning.</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[#1D3461] leading-snug mb-1">Are you fascinated by theology but wonder, "will it get me a job"?</p>
+              <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">This programme will prepare you for a range of future careers, including further academic research, post-bachelor's studies, religious service, educational, cultural, and social work — and any field where a humanities education is a valuable asset.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 mb-8">
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Language: <strong class="text-[#1D3461]">English</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Duration: <strong class="text-[#1D3461]">3 years (standard)</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Form: <strong class="text-[#1D3461]">Full-time, on-site</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Tuition: <strong class="text-[#1D3461]">25000 CZK / year (ca 1060 €)</strong>
+            </div>
+          </div>
+
+          <a href="https://web.etf.cuni.cz/ETFENG-152.html" target="_blank" rel="noopener" class="btn-primary">Apply — Bachelor's →</a>
+        </div>
+
+        <!-- Right: cards -->
+        <div class="flex flex-col gap-4">
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base">We are eager to share our knowledge in the foundational theological fields including:</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Biblical studies</li>
+              <li>Christian traditions &amp; Church history</li>
+              <li>World religions</li>
+              <li>Philosophical thought &amp; Ethics</li>
+              <li>Ecumenics &amp; inter-religious dialogue</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base">Admission Requirements</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Secondary school leaving certificate</li>
+              <li>English proficiency (B2 or above)</li>
+              <li>Interview with the admissions committee</li>
+            </ul>
+          </div>
+          <div class="info-card flex gap-4">
+            <div class="quote-bar"></div>
+            <p class="text-sm text-[#1A1A2A]/70 italic leading-[1.7]">
+              "The Protestant Theological Faculty is a wonderful place to study. The teaching is top-quality; keeping balance between rigour and free thought. Small class sizes mean it’s easy to make friends, and learn in community. Situated at the heart of Central Europe, one feels that the PTF is a crossroads to many new adventures." – Lucas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MASTER ── -->
+    <div class="tab-panel" id="tab-master" role="tabpanel">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <span class="rule"></span>
+          <h3 class="text-2xl font-bold text-[#1D3461] mb-4 leading-tight">Research Master's in Protestant Theology<br/><span class="text-[#C41E24]">Master's programme</span></h3>
+          <p class="text-[#1A1A2A]/65 leading-[1.75] mb-6">
+            This study program is currently under development. Applications will presumably be open from January 2027.
+          <p class="text-[#1A1A2A]/65 leading-[1.75] mb-6">Our master's program will provide you with a deeper insight into the classical disciplines of Protestant Theology in its historical and contemporary contexts, which makes you even more skilled and competitive in theological fields.
+          </p>
+
+          <div class="flex flex-col gap-3 mb-8">
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Language: <strong class="text-[#1D3461]">English</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Duration: <strong class="text-[#1D3461]">2 years (standard)</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Form: <strong class="text-[#1D3461]">Full-time, on-site</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Tuition: <strong class="text-[#1D3461]">25000 CZK / year (ca 1060 €)</strong>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-primary">Apply — Master's →</a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base">Specialisation Tracks</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Biblical Studies</li>
+              <li>Church History &amp; Systematic Theology</li>
+              <li>Philosophy &amp; Religious Studies</li>
+              <li>Practical &amp; Ecumenical Theology &amp; Theological Ethics</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base">Admission Requirements</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Bachelor's degree (theology or related field)</li>
+              <li>English proficiency (C1 recommended)</li>
+              <li>Research proposal</li>
+              <li>Interview with the admissions committee</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DOCTORAL ── -->
+    <div class="tab-panel" id="tab-doctoral" role="tabpanel">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <span class="rule"></span>
+          <h3 class="text-2xl font-bold text-[#1D3461] mb-4 leading-tight">Postgraduate doctoral studies<br/><span class="text-[#C41E24]">PhD programmes</span></h3>
+          <p class="text-[#1A1A2A]/65 leading-[1.75] mb-6">
+            To study a PhD programme at the Protestant Theological Faculty of Charles University is a good choice. The expertise of renowned scholars in their respective fields is multiplied by the individual approach to students. 
+          <p class="text-[#1A1A2A]/65 leading-[1.75] mb-6">
+            You will have the opportunity to participate in significant theological projects, take part in international cooperation programs, or apply for university grants for your own research.
+          </p>
+
+
+          <div class="flex flex-col gap-3 mb-8">
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Language of instruction: <strong class="text-[#1D3461]">English (or Czech)</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Duration: <strong class="text-[#1D3461]">4 years (standard)</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Form: <strong class="text-[#1D3461]">full-time or combined (part-time)</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Tuition: <strong class="text-[#1D3461]">500 € / academic year</strong>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#1A1A2A]/70">
+              <div class="w-5 h-5 rounded-full bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              Funding: <strong class="text-[#1D3461]">Stipend available for full-time students</strong>
+            </div>
+          </div>
+
+          <a href="https://web.etf.cuni.cz/ETFENG-53.html" target="_blank" rel="noopener" class="btn-primary">Apply — Doctoral →</a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base"> The four doctoral programmes:</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Biblical Theology</li>
+              <li>Historical &amp; Systematic Theology</li>
+              <li>Practical &amp; Ecumenical Theology &amp; Theological Ethics</li>
+              <li> Philosophy of Religion</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4 class="font-semibold text-[#1D3461] mb-2 text-base"> Prerequisities and conditions</h4>
+            <ul class="text-sm text-[#1A1A2A]/65 leading-loose space-y-1">
+              <li>Master's degree in theology or related field</li>
+              <li>Dissertation idea agreed upon with a potential supervisor</li>
+              <li>The ability to complete the project, as shown in the entrance exam</li>
+            </ul>
+          </div>
+          <div class="info-card flex gap-4">
+            <div class="quote-bar"></div>
+            <p class="text-sm text-[#1A1A2A]/70 italic leading-[1.7]">
+              "I like that programmes at the Protestant Theological faculty are led by excellent supervisors, supported by a great library, and are, by their very nature, international. We have the opportunity to conduct research stays and attend conferences in different countries. So, although I am only a PhD student, I already have many professional contacts with colleagues in my field." – Olena
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     WHY PRAGUE
+══════════════════════════════════════════════ -->
+<section class="py-24 md:py-32" id="why-prague" style="background: var(--cream);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-16">
+      <span class="section-tag">Why Study Here</span>
+      <h2 class="mt-3 text-[#1D3461] font-bold tracking-tight" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em;">
+        Bridging centuries, creating the future
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">World-Class University</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">Not only is Charles University one of the first universities ever established in Europe (in 1348), but today it is the largest and highest-ranked university among the 24 countries of Central and Eastern Europe.</p>
+      </div>
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h16"/><path d="M4 2C2 2 2 13 9.5 14"/><path d="M20 2C22 2 22 13 14.5 14"/><path d="M9.5 14Q12 15.5 14.5 14"/><line x1="12" y1="15.5" x2="12" y2="17"/><circle cx="12" cy="18.5" r="1.5"/><line x1="12" y1="20" x2="12" y2="21"/><path d="M7 22h10"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">Living Reformation Heritage</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]"> You will not only learn about the history of religion but also live in one of the key locations that shaped the religious history of Europe. Prague boasts hundreds of beautifully preserved churches and is the hometown of Jan Hus, the grandfather of Protestantism.</p>
+      </div>
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">Place to be</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]"> Prague is regularly listed among the most beautiful, safest, greenest, and most vibrant cities in the world. Thanks to i'ts great location and affordable public transportation, you can easily set off from Prague to explore other places in the Czech Republic and Europe!</p>
+      </div>
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-1"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">Small, Personal Community</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">We base our work on a prestige study in small learning circles with a family-like collective. That means plenty of opportunities for discussion, as well as individual questions and answers. Collaborative learning and mentorship are at the core of faculty's culture.</p>
+      </div>
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="2"/><path d="M5 5v4c0 1.1 3.1 2 7 2s7-.9 7-2V5"/><path d="M5 9v4c0 1.1 3.1 2 7 2s7-.9 7-2V9"/><path d="M5 13v4c0 1.1 3.1 2 7 2s7-.9 7-2v-4"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">Affordable studies</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]"> Tuition for our programmes is only about 1,000 Euros per year, and international students spend about 7,000 Euros per year for all other living costs (university accommodation is guaranteed). You don't need to be concerned; we will fully assist you with your admission.</p>
+      </div>
+
+      <div class="info-card">
+        <div class="w-10 h-10 rounded-lg bg-[#1D3461]/10 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#1D3461] mb-2">Digital & Library Resources</h3>
+        <p class="text-sm text-[#1A1A2A]/65 leading-[1.7]">Our facilities are located right in the centre of Prague, including one of the best theological libraries in Central Europe. Our students have the opportunity to participate in various international projects, including visits to universities abroad and archaeological excavations at historical sites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FACULTY HIGHLIGHT
+══════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 bg-white" id="faculty">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="section-tag">Our Faculty</span>
+        <h2 class="mt-3 mb-6 text-[#1D3461] font-bold tracking-tight" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em;">
+          Scholars who<br/>shape the field
+        </h2>
+        <p class="text-[#1A1A2A]/65 leading-[1.75] mb-6">
+          Our professors are internationally active theologians, published authors, and ecumenical dialogue partners. They bring genuine research into the classroom and supervise students as junior colleagues.
+        </p>
+        <p class="text-[#1A1A2A]/65 leading-[1.75] mb-10">
+          The faculty maintains active research partnerships with universities across Europe, North America, and beyond. Through exchange programmes and visiting scholars, our students engage with the global theological conversation.
+        </p>
+
+        <!-- FAQ accordion -->
+        <div>
+          <div class="accordion-item">
+            <button class="accordion-btn open" data-accordion="a1" aria-expanded="true">
+              <span>Is the degree recognised internationally?</span>
+              <div class="accordion-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+            </button>
+            <div class="accordion-body" id="a1-body" style="max-height: 200px;">
+              <p>Yes. Charles University degrees are accredited under the Bologna Process and and ECTS (European Credit Transfer and Accumulation System). Many PTF CU graduates pursue further study or careers worldwide.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" data-accordion="a2" aria-expanded="false">
+              <span>Do I need to speak Czech?</span>
+              <div class="accordion-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+            </button>
+            <div class="accordion-body" id="a2-body">
+              <p>No. All three programmes are taught fully in English and you can complete your entire degree without knowing Czech. That said, we offer Czech language courses and many students find learning some Czech enriches their experience of living in Prague.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" data-accordion="a3" aria-expanded="false">
+              <span>Can I apply if I am not Christian?</span>
+              <div class="accordion-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+            </button>
+            <div class="accordion-body" id="a3-body">
+              <p>PTF CU is a welcoming, ecumenical community. While the curriculum is rooted in the Christian theological tradition, students from all backgrounds — including those of other faiths or no religious affiliation — are encouraged to apply if they have a genuine academic interest in theology.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" data-accordion="a4" aria-expanded="false">
+              <span>Are there scholarships available?</span>
+              <div class="accordion-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+            </button>
+            <div class="accordion-body" id="a4-body">
+              <p>We offer merit-based scholarships for outstanding students (after the first year of studies) or some other forms of tuition fee reductions. As a full-time doctoral student, you will receive a monthly scholarship during the standard length of your studies
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: visual -->
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden" style="aspect-ratio: 4/5; position: relative;">
+          <picture>
+            <source srcset="Webovky/Fotky/scholars.webp" type="image/webp">
+            <img
+              src="Webovky/Fotky/scholars.jpg"
+              alt="Academic ceremony at the Protestant Theological Faculty, Prague"
+              class="w-full h-full object-cover"
+              style="object-position: center 20%;"
+              loading="lazy" decoding="async"
+            />
+          </picture>
+          <!-- dark gradient so bottom text stays legible -->
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,20,45,0.82) 0%, rgba(10,20,45,0.45) 35%, rgba(10,20,45,0.10) 65%, transparent 100%);"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <p class="text-white/80 text-sm mb-1 font-medium tracking-wide uppercase" style="letter-spacing: 0.1em;">Established</p>
+            <p class="text-white font-bold" style="font-size: 3.5rem; line-height: 1; letter-spacing: -0.03em;">1919</p>
+            <p class="text-white/70 text-sm mt-2 leading-snug">Over a century of<br/>theological scholarship in Prague</p>
+          </div>
+        </div>
+        <!-- Floating card -->
+        <div class="absolute -bottom-6 -right-4 md:-right-8 info-card w-48" style="background: white; z-index: 10;">
+          <p class="text-xs text-[#1A1A2A]/55 mb-1">Charles University rank</p>
+          <p class="text-2xl font-bold text-[#1D3461] leading-none">#1</p>
+          <p class="text-xs text-[#1A1A2A]/55 mt-1">in the Czech Republic</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     ADMISSION TIMELINE
+══════════════════════════════════════════════ -->
+<section class="py-24 md:py-32" id="admission" style="background: var(--navy);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-16">
+      <span class="text-[#C41E24] text-xs font-semibold tracking-[0.12em] uppercase">Admission</span>
+      <h2 class="mt-3 text-white font-bold tracking-tight" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em;">
+        Your path to Prague
+      </h2>
+      <p class="mt-4 text-white/60 text-lg leading-[1.7] max-w-xl">
+        Applications for the 2026/2027 academic year are coming soon. Follow the steps below to get started.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Step 1 -->
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-[#C41E24] flex items-center justify-center text-white font-bold text-sm mb-4">1</div>
+        <h3 class="text-white font-semibold mb-2">Choose Your Programme</h3>
+        <p class="text-white/55 text-sm leading-[1.7]">Review the Bachelor's, Master's, or Doctoral programme requirements and confirm you meet the eligibility criteria.</p>
+        <div class="hidden md:block absolute top-5 left-10 right-0 h-px bg-white/15"></div>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-[#C41E24] flex items-center justify-center text-white font-bold text-sm mb-4">2</div>
+        <h3 class="text-white font-semibold mb-2">Prepare Documents</h3>
+        <p class="text-white/55 text-sm leading-[1.7]">Gather any programme-specific materials.</p>
+        <div class="hidden md:block absolute top-5 left-10 right-0 h-px bg-white/15"></div>
+      </div>
+      <!-- Step 3 -->
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-[#C41E24] flex items-center justify-center text-white font-bold text-sm mb-4">3</div>
+        <h3 class="text-white font-semibold mb-2">Submit Application</h3>
+        <p class="text-white/55 text-sm leading-[1.7]">Complete the online application through Charles University's admissions portal. Our office reviews all applications and contacts you for an interview.</p>
+        <div class="hidden md:block absolute top-5 left-10 right-0 h-px bg-white/15"></div>
+      </div>
+      <!-- Step 4 -->
+      <div>
+        <div class="w-10 h-10 rounded-full bg-[#C41E24] flex items-center justify-center text-white font-bold text-sm mb-4">4</div>
+        <h3 class="text-white font-semibold mb-2">Pass the entrance exam</h3>
+        <p class="text-white/55 text-sm leading-[1.7]">The admissions committee will contact you to discuss your motivation for study and your understanding of theology</p>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-12 border-t border-white/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <p class="text-white font-semibold text-lg mb-1">Application deadline: <span class="text-[#C41E24]">10 June 2026</span></p>
+        <p class="text-white/55 text-sm">Late applications may be considered subject to capacity.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://web.etf.cuni.cz/ETFENG-42.html" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#C41E24] hover:bg-[#9E1419] text-white font-semibold text-sm transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
+          Apply Now →
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/25 hover:border-white/50 text-white font-semibold text-sm transition-colors duration-200">
+          Contact Admissions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 bg-white" id="contact">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-stretch">
+      <div class="flex flex-col gap-6">
+        <div>
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="mt-3 mb-4 text-[#1D3461] font-bold tracking-tight" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em;">
+            Ready to start?<br/>We're here to help.
+          </h2>
+          <p class="text-[#1A1A2A]/65 leading-[1.75]">
+            Our team is happy to answer any questions about programmes, admission requirements, student life, housing, and visas.
+          </p>
+        </div>
+
+        <!-- Person cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <!-- Jana Nováková -->
+          <div class="info-card" style="padding: 1.25rem;">
+            <div class="flex items-center gap-3 mb-3">
+              <picture>
+                <source srcset="Webovky/Fotky/SO_Novakova_Jana.webp" type="image/webp">
+                <img src="Webovky/Fotky/SO_Novakova_Jana.jpg" alt="Mgr. Jana Nováková"
+                     class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                     style="object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     loading="lazy" decoding="async" />
+              </picture>
+              <div>
+                <p class="font-semibold text-[#1D3461] text-sm leading-snug">Mgr. Jana Nováková</p>
+                <p class="text-[0.7rem] text-[#1A1A2A]/50 leading-snug mt-0.5">English Study Programmes Administrator</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5 pt-3" style="border-top: 1px solid rgba(29,52,97,0.08);">
+              <a href="mailto:admissions@etf.cuni.cz"
+                 class="text-xs text-[#C41E24] hover:underline flex items-center gap-1.5 font-medium">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                admissions@etf.cuni.cz
+              </a>
+              <a href="tel:+420221988210"
+                 class="text-xs text-[#1A1A2A]/55 hover:text-[#1D3461] flex items-center gap-1.5 transition-colors">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (+420) 221 988 210
+              </a>
+            </div>
+          </div>
+
+          <!-- Radmila Sejkotová -->
+          <div class="info-card" style="padding: 1.25rem;">
+            <div class="flex items-center gap-3 mb-3">
+              <picture>
+                <source srcset="Webovky/Fotky/rs2.webp" type="image/webp">
+                <img src="Webovky/Fotky/rs2.jpg" alt="Radmila Sejkotová"
+                     class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                     style="object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     loading="lazy" decoding="async" />
+              </picture>
+              <div>
+                <p class="font-semibold text-[#1D3461] text-sm leading-snug">Radmila Sejkotová</p>
+                <p class="text-[0.7rem] text-[#1A1A2A]/50 leading-snug mt-0.5">Doctoral Studies Administrator</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5 pt-3" style="border-top: 1px solid rgba(29,52,97,0.08);">
+              <a href="mailto:office@etf.cuni.cz"
+                 class="text-xs text-[#C41E24] hover:underline flex items-center gap-1.5 font-medium">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                office@etf.cuni.cz
+              </a>
+              <a href="tel:+420221988216"
+                 class="text-xs text-[#1A1A2A]/55 hover:text-[#1D3461] flex items-center gap-1.5 transition-colors">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (+420) 221 988 216
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- International relations block -->
+        <div class="info-card flex items-start gap-4" style="padding: 1.25rem 1.5rem; background: rgba(29,52,97,0.03);">
+          <div class="w-9 h-9 rounded-lg bg-[#1D3461]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D3461" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <p class="text-[0.67rem] font-semibold text-[#1A1A2A]/45 uppercase mb-1.5" style="letter-spacing: 0.1em;">Erasmus · Free-movers · Short-term studies</p>
+            <a href="https://web.etf.cuni.cz/ETFENG-107.html" target="_blank" rel="noopener"
+               class="text-sm font-semibold text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200 inline-flex items-center gap-1 mb-2">
+              Office for International Relations
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <br/>
+            <a href="mailto:international@etf.cuni.cz"
+               class="text-xs text-[#C41E24] hover:underline inline-flex items-center gap-1.5 font-medium mt-0.5">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              international@etf.cuni.cz
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FormConnector embed -->
+      <div class="info-card formconnector-wrap" style="padding: 2.5rem; height: 100%;">
+        <div id="formconnector_target"></div>
+        <script type="text/javascript">
+          window.FormConnector_settings = {
+            uuid: 'c86e4710c94b11f0ab735ba3a6c448fc',
+          };
+        </script>
+        <script type="text/javascript" src="https://formconnector.com/form/formconnector.js" defer></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-10">
+      <div class="md:col-span-2">
+        <picture>
+          <source srcset="Webovky/LOGO_ETF_horizontal-EN.webp" type="image/webp">
+          <img src="Webovky/LOGO_ETF_horizontal-EN.png" alt="Protestant Theological Faculty, Charles University" class="h-16 w-auto mb-4 brightness-0 invert opacity-80" />
+        </picture>
+        <p class="text-sm text-white/50 leading-[1.7] max-w-xs">
+          The Protestant Theological Faculty is built on personal relationships, mutual dialogue, and high expertise. It is the only faculty in the Czech Republic that offers a classic study programme in Protestant Theology. The faculty is open to all applicants, regardless of their religious beliefs.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold mb-4">Programmes</h4>
+        <ul class="flex flex-col gap-2">
+          <li><a href="#programmes" class="text-sm text-white/50 hover:text-white transition-colors duration-200" onclick="switchTab('bachelor')">Bachelor's Programme</a></li>
+          <li><a href="#programmes" class="text-sm text-white/50 hover:text-white transition-colors duration-200" onclick="switchTab('master')">Master's Programme</a></li>
+          <li><a href="#programmes" class="text-sm text-white/50 hover:text-white transition-colors duration-200" onclick="switchTab('doctoral')">Doctoral Studies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold mb-4">Information</h4>
+        <ul class="flex flex-col gap-2">
+          <li><a href="#why-prague" class="text-sm text-white/50 hover:text-white transition-colors duration-200">Why Prague</a></li>
+          <li><a href="#faculty" class="text-sm text-white/50 hover:text-white transition-colors duration-200">Faculty</a></li>
+          <li><a href="#admission" class="text-sm text-white/50 hover:text-white transition-colors duration-200">Admission</a></li>
+          <li><a href="#contact" class="text-sm text-white/50 hover:text-white transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-white/35">© 2026 Protestant Theological Faculty, Charles University. All rights reserved.</p>
+      <p class="text-xs text-white/35">Černá 9, 115 55 Praha 1, Czech Republic</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  /* ── Navbar scroll shadow (passive + RAF throttle) ── */
+  const navbar = document.getElementById('navbar');
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+
+  /* ── Mobile menu ── */
+  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  });
+
+  /* ── Tab switcher ── */
+  function switchTab(name) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      const isActive = btn.dataset.tab === name;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive);
+    });
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+      panel.classList.toggle('active', panel.id === `tab-${name}`);
+    });
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  /* ── Accordion ── */
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.accordion;
+      const body = document.getElementById(`${id}-body`);
+      const isOpen = btn.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.accordion-btn').forEach(b => {
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+      });
+      document.querySelectorAll('.accordion-body').forEach(b => {
+        b.style.maxHeight = '0';
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+</script>
+</body>
+</html>
