@@ -124,7 +124,7 @@
 
     /* ── Base ── */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
     body {
       font-family: 'Silka', system-ui, sans-serif;
       background-color: #F7F5F0;
@@ -421,11 +421,22 @@
       .btn-outline:hover { background: transparent; color: var(--navy); transform: none; }
     }
 
-    /* ── content-visibility: skip layout/paint for off-screen sections ── */
-    #why-prague, #faculty, #admission, #contact {
-      content-visibility: auto;
-      contain-intrinsic-size: 0 800px;
+    /* ── Scroll entrance animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal:nth-child(2) { transition-delay: 0.08s; }
+    .reveal:nth-child(3) { transition-delay: 0.16s; }
+    .reveal:nth-child(4) { transition-delay: 0.24s; }
+    .reveal:nth-child(5) { transition-delay: 0.32s; }
+    .reveal:nth-child(6) { transition-delay: 0.40s; }
 
     /* ── Respect user's reduced-motion preference ── */
     @media (prefers-reduced-motion: reduce) {
@@ -1321,6 +1332,26 @@
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => switchTab(btn.dataset.tab));
   });
+
+  /* ── Scroll entrance animations (Intersection Observer) ── */
+  [
+    '#why-prague .grid > .info-card',
+    '#admission .grid > div',
+    '#contact .grid > .info-card',
+  ].forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => el.classList.add('reveal'));
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) {
+        target.classList.add('visible');
+        revealObserver.unobserve(target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   /* ── Accordion ── */
   document.querySelectorAll('.accordion-btn').forEach(btn => {
