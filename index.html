@@ -287,11 +287,35 @@
       .btn-primary, .btn-outline { padding: 0.75rem 1.5rem; font-size: 0.875rem; }
     }
     @media (max-width: 480px) {
-      .tab-btn { padding: 0.5rem 0.75rem; font-size: 0.75rem; white-space: nowrap; }
       .pill { font-size: 0.72rem; padding: 0.25rem 0.7rem; }
     }
     /* hide scrollbar on tab nav */
     .tab-nav::-webkit-scrollbar { display: none; }
+
+    /* ── Mobile: show all 3 tabs without scrolling ── */
+    @media (max-width: 767px) {
+      .tab-nav {
+        overflow-x: visible;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .tab-btn {
+        white-space: normal;
+        text-align: center;
+        padding: 0.625rem 0.35rem;
+        font-size: 0.75rem;
+        line-height: 1.3;
+      }
+    }
+
+    /* ── Mobile: faculty float card flows below image ── */
+    @media (max-width: 767px) {
+      .faculty-float-card {
+        position: static !important;
+        margin-top: 0.75rem;
+        margin-left: auto;
+      }
+    }
 
     /* ── GPU hints for frequently animated elements ── */
     .btn-primary, .btn-outline { will-change: transform; }
@@ -399,17 +423,14 @@
 <nav class="navbar" id="navbar">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
     <a href="#" class="flex items-center gap-3 focus-visible:outline-none">
-      <picture>
-        <source srcset="Webovky/LOGO_ETF_horizontal-EN.webp" type="image/webp">
-        <img src="Webovky/LOGO_ETF_horizontal-EN.png" alt="Protestant Theological Faculty, Charles University" class="h-10 w-auto" />
-      </picture>
+      <img src="Webovky/Fotky/LOGO_ETF_UK_logo-EN.png" alt="Protestant Theological Faculty, Charles University" class="h-14 w-auto" />
     </a>
     <div class="hidden md:flex items-center gap-8">
       <a href="#programmes" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200 focus-visible:outline-[#1D3461] focus-visible:outline-2 focus-visible:outline-offset-2">Programmes</a>
       <a href="#why-prague" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Why Prague</a>
       <a href="#faculty" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Faculty</a>
       <a href="#admission" class="text-sm font-medium text-[#1D3461] hover:text-[#C41E24] transition-colors duration-200">Admission</a>
-      <a href="#contact" class="btn-primary text-sm py-2 px-5">Apply Now →</a>
+      <a href="https://is.cuni.cz/studium/eng/prijimacky/index.php?do=obory&amp;fakulta=11270&amp;fst=&amp;druh=B&amp;stupr=&amp;obor1=&amp;iscedkod=&amp;jazyk=&amp;delka=&amp;fulltext=&amp;zobraz=Show+6+items" target="_blank" rel="noopener" class="btn-primary text-sm py-2 px-5">Apply Now →</a>
     </div>
     <!-- Mobile menu button -->
     <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md text-[#1D3461] hover:bg-[#1D3461]/10 transition-colors" aria-label="Toggle menu">
@@ -423,7 +444,7 @@
       <a href="#why-prague" class="text-sm font-medium text-[#1D3461]">Why Prague</a>
       <a href="#faculty" class="text-sm font-medium text-[#1D3461]">Faculty</a>
       <a href="#admission" class="text-sm font-medium text-[#1D3461]">Admission</a>
-      <a href="#contact" class="btn-primary text-center mt-2">Apply Now →</a>
+      <a href="https://is.cuni.cz/studium/eng/prijimacky/index.php?do=obory&amp;fakulta=11270&amp;fst=&amp;druh=B&amp;stupr=&amp;obor1=&amp;iscedkod=&amp;jazyk=&amp;delka=&amp;fulltext=&amp;zobraz=Show+6+items" target="_blank" rel="noopener" class="btn-primary text-center mt-2">Apply Now →</a>
     </div>
   </div>
 </nav>
@@ -559,8 +580,8 @@
         Doctoral Studies
       </button>
       </div>
-      <!-- Fade hint for mobile scroll -->
-      <div class="md:hidden pointer-events-none absolute top-0 right-0 bottom-0 w-12"
+      <!-- Fade hint: hidden since all 3 tabs fit on mobile without scrolling -->
+      <div class="hidden pointer-events-none absolute top-0 right-0 bottom-0 w-12"
            style="background: linear-gradient(to right, transparent, #fff);"></div>
     </div>
 
@@ -947,7 +968,7 @@
           </div>
         </div>
         <!-- Floating card -->
-        <div class="absolute -bottom-6 -right-4 md:-right-8 info-card w-48" style="background: white; z-index: 10;">
+        <div class="faculty-float-card absolute -bottom-6 -right-4 md:-right-8 info-card w-48" style="background: white; z-index: 10;">
           <p class="text-xs text-[#1A1A2A]/55 mb-1">Charles University rank</p>
           <p class="text-2xl font-bold text-[#1D3461] leading-none">#1</p>
           <p class="text-xs text-[#1A1A2A]/55 mt-1">in the Czech Republic</p>
@@ -1009,7 +1030,7 @@
         <p class="text-white/55 text-sm">Late applications may be considered subject to capacity.</p>
       </div>
       <div class="flex gap-4">
-        <a href="https://web.etf.cuni.cz/ETFENG-42.html" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#C41E24] hover:bg-[#9E1419] text-white font-semibold text-sm transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
+        <a href="https://is.cuni.cz/studium/eng/prijimacky/index.php?do=obory&amp;fakulta=11270&amp;fst=&amp;druh=B&amp;stupr=&amp;obor1=&amp;iscedkod=&amp;jazyk=&amp;delka=&amp;fulltext=&amp;zobraz=Show+6+items" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#C41E24] hover:bg-[#9E1419] text-white font-semibold text-sm transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
           Apply Now →
         </a>
         <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/25 hover:border-white/50 text-white font-semibold text-sm transition-colors duration-200">
@@ -1042,13 +1063,14 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           <!-- Jana Nováková -->
-          <div class="info-card" style="padding: 1.25rem;">
-            <div class="flex items-center gap-3 mb-3">
+          <div class="info-card flex flex-col" style="padding: 1.25rem;">
+            <div class="flex items-center gap-3 mb-3" style="min-height: 4.5rem;">
               <picture>
                 <source srcset="Webovky/Fotky/SO_Novakova_Jana.webp" type="image/webp">
                 <img src="Webovky/Fotky/SO_Novakova_Jana.jpg" alt="Mgr. Jana Nováková"
-                     class="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                     style="object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     class="rounded-full object-cover flex-shrink-0"
+                     style="width: 56px; height: 56px; min-width: 56px; border-radius: 50%; object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     width="56" height="56"
                      loading="lazy" decoding="async" />
               </picture>
               <div>
@@ -1056,7 +1078,7 @@
                 <p class="text-[0.7rem] text-[#1A1A2A]/50 leading-snug mt-0.5">English Study Programmes Administrator</p>
               </div>
             </div>
-            <div class="flex flex-col gap-1.5 pt-3" style="border-top: 1px solid rgba(29,52,97,0.08);">
+            <div class="flex flex-col gap-1.5 pt-3 mt-auto" style="border-top: 1px solid rgba(29,52,97,0.08);">
               <a href="mailto:admissions@etf.cuni.cz"
                  class="text-xs text-[#C41E24] hover:underline flex items-center gap-1.5 font-medium">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1071,13 +1093,14 @@
           </div>
 
           <!-- Radmila Sejkotová -->
-          <div class="info-card" style="padding: 1.25rem;">
-            <div class="flex items-center gap-3 mb-3">
+          <div class="info-card flex flex-col" style="padding: 1.25rem;">
+            <div class="flex items-center gap-3 mb-3" style="min-height: 4.5rem;">
               <picture>
                 <source srcset="Webovky/Fotky/rs2.webp" type="image/webp">
                 <img src="Webovky/Fotky/rs2.jpg" alt="Radmila Sejkotová"
-                     class="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                     style="object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     class="rounded-full object-cover flex-shrink-0"
+                     style="width: 56px; height: 56px; min-width: 56px; border-radius: 50%; object-position: center 15%; border: 2px solid rgba(29,52,97,0.12);"
+                     width="56" height="56"
                      loading="lazy" decoding="async" />
               </picture>
               <div>
@@ -1085,7 +1108,7 @@
                 <p class="text-[0.7rem] text-[#1A1A2A]/50 leading-snug mt-0.5">Doctoral Studies Administrator</p>
               </div>
             </div>
-            <div class="flex flex-col gap-1.5 pt-3" style="border-top: 1px solid rgba(29,52,97,0.08);">
+            <div class="flex flex-col gap-1.5 pt-3 mt-auto" style="border-top: 1px solid rgba(29,52,97,0.08);">
               <a href="mailto:office@etf.cuni.cz"
                  class="text-xs text-[#C41E24] hover:underline flex items-center gap-1.5 font-medium">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
