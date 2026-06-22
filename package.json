@@ -1,0 +1,16 @@
+{
+  "name": "studytheology-eu",
+  "version": "1.0.0",
+  "description": "Study Theology in Prague, Europe — Charles University",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild speed-insights.js --bundle --format=iife --outfile=speed-insights-bundle.js --minify"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  }
+}
