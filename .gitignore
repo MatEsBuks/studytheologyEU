@@ -5,8 +5,11 @@ temporary screenshots/
 credentials.json
 token.json
 *.mjs
-package.json
-package-lock.json
+# Allow Speed Insights files
+!speed-insights.js
+# Allow package.json and package-lock.json for Vercel Speed Insights
+!package.json
+!package-lock.json
 tailwind.config.js
 tailwind.input.css
 CLAUDE.md
@@ -14,3 +17,5 @@ CLAUDE_web.md
 screenshot*/
 Webovky/Fotky/prague_photo_blue.png
 Webovky/Logo_manual_UK_071024.pdf
+# Allow speed-insights bundle
+!speed-insights-bundle.js
